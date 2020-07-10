@@ -13,7 +13,144 @@ block content
 
     picture
       source(srcset="./img/logo.webp" type="image/webp")
-      source(srcset="./img/logo.jpg" type="image/png")
+      source(srcset="./img/logo.png" type="image/png")
       img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
   div.main-wrap
+    .top-home.b-lazy.webp-img(data-webp="./img/top-home-bg.webp"
+      data-img="./img/top-home-bg.jpg")
+      .top-home__inner.site-container
+        .top-home__img
+          picture
+            source(srcset="./img/top-home-img.webp" type="image/webp")
+            source(srcset="./img/top-home-img.png" type="image/png")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="358" height="591" alt="img")
+        .top-home__content
+          h1.top-home__title лечение алкогольной и наркотической зависимости с гарантией от срыва
+          .top-home__btn
+            a(href="#").site-btn.top-home__btn-i Вызвать нарколога
+            a(href="#").site-btn.site-btn--transparent.top-home__btn-i Бесплатная консультация
+
+    .advantage
+      .advantage__inner.site-container
+        h2.advantage__title.site-title Наши преимущества
+        .advantage__content.custom-row
+          .advantage__item.custom-col
+            .advantage__num 01
+            .advantage__txt
+              .advantage__name Выезд на дом
+              .advantage__desc Приезд на дом за 29 мин по Санкт-Петербургу и области
+          .advantage__item.custom-col
+            .advantage__num 02
+            .advantage__txt
+              .advantage__name Лучшие специалисты
+              .advantage__desc Опыт врачей от 10 лет с кандидатскими  степенями
+          .advantage__item.custom-col
+            .advantage__num 03
+            .advantage__txt
+              .advantage__name Низкие цены
+              .advantage__desc Лечение в стационаре от 2800 руб/сутки
+          .advantage__item.custom-col
+            .advantage__num 04
+            .advantage__txt
+              .advantage__name Анонимность
+              .advantage__desc 100% анонимность и гарантия результата
+          .advantage__item.custom-col
+            .advantage__num 05
+            .advantage__txt
+              .advantage__name Удобная оплата
+              .advantage__desc Оплата любыми банковскими картами
+          .advantage__item.custom-col
+            .advantage__num 06
+            .advantage__txt
+              .advantage__name Мотивация
+              .advantage__desc Формируем 100% мотивацию на лечение
+
+    .our-service
+      .our-service__inner.site-container
+        h2.our-service__title.site-title Наши услуги
+        .our-service__slider.our-service-slider
+          .our-service__item
+            .our-service__item-title Вывод из запоя
+            .our-service__item-txt.
+              Выведение из запоя на дому в клинике доктора Лазарева проводят только сертифицированные психиатры- -наркологи с многолетним опытом работы. Доверять свое здоровье можно только
+              в руки настоящих профессионалов.
+            .our-service__item-btn
+              a(href="#").site-btn.our-service__item-btn Узнать подробнее
+          .our-service__item
+            .our-service__item-title Лечение в стационаре
+            .our-service__item-txt.
+              Выведение из запоя на дому в клинике доктора Лазарева проводят только сертифицированные психиатры- -наркологи с многолетним опытом работы. Доверять свое здоровье можно только
+              в руки настоящих профессионалов.
+            .our-service__item-btn
+              a(href="#").site-btn.our-service__item-btn Узнать подробнее
+          .our-service__item
+            .our-service__item-title Лечение алкоголизма
+            .our-service__item-txt.
+              Выведение из запоя на дому в клинике доктора Лазарева проводят только сертифицированные психиатры- -наркологи с многолетним опытом работы. Доверять свое здоровье можно только
+              в руки настоящих профессионалов.
+            .our-service__item-btn
+              a(href="#").site-btn.our-service__item-btn Узнать подробнее
+
+    .doctors.b-lazy.webp-img(data-webp="./img/doctors-bg.webp"
+      data-img="./img/doctors-bg.jpg")
+      .doctors__inner.site-container
+        h2.doctors__title.site-title Наши врачи
+        .doctors__slider.doctors-slider
+          .doctors__item
+            .doctors__photo
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-blazy="../img/doctor01.png"
+                width="360" height="360" alt="img").b-lazy.doctors__photo-i
+            .doctors__name Лазарев Игорь Александрович
+            .doctors__caption Главный врач, психиатр-нарколог, <br> кандидат медицинских наук
+            a(href="#").doctors__btn.site-btn Подробнее
+          .doctors__item
+            .doctors__photo
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-blazy="../img/doctor02.png"
+              width="360" height="360" alt="img").b-lazy.doctors__photo-i
+            .doctors__name Кокорева Ольга Эдуардовна
+            .doctors__caption Врач психиатр-нарколог
+            a(href="#").doctors__btn.site-btn Подробнее
+          .doctors__item
+            .doctors__photo
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-blazy="../img/doctor03.png"
+                width="360" height="360" alt="img").b-lazy.doctors__photo-i
+            .doctors__name Сабин Александр Семенович
+            .doctors__caption Врач психиатр-нарколог
+            a(href="#").doctors__btn.site-btn Подробнее
+
+    .why-we
+      .why-we__inner.site-container
+        .why-we__title.site-title
+        .why-we__content
+          .why-we__list.custom-row
+            .why-we__item.custom-col
+              .why-we__ico
+                picture
+                  source(srcset="./img/why-we-ico01.webp" type="image/webp")
+                  source(srcset="./img/why-we-ico01.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="142" height="142" alt="img")
+              .why-we__name Капельницы <br> от алкоголизма
+              .why-we__txt.
+                Уникальный состав капельницы позволяет убрать тремор, тошноту, бессонницу и тягу к алкоголю, сделать полное выведение из запоя. Мотивация на лечение, поддержка на всем сроке лечения.
+            .why-we__item.custom-col
+              .why-we__ico
+                picture
+                  source(srcset="./img/why-we-ico02.webp" type="image/webp")
+                  source(srcset="./img/why-we-ico02.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="142" height="142" alt="img")
+              .why-we__name Эффективное <br> кодирование
+              .why-we__txt.
+                Мы используем лицензированные МИНздравом РФ препараты и методики, которые полностью снимают тягу и позволяют добится трезвости у 90% пациентов. Поддержка и консультации врача на протяжение всего срока кодирования.
+            .why-we__item.custom-col
+              .why-we__ico
+                picture
+                  source(srcset="./img/why-we-ico02.webp" type="image/webp")
+                  source(srcset="./img/why-we-ico02.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="142" height="142" alt="img")
+              .why-we__name Стационар <br> и реабилитация
+              .why-we__txt.
+                Лечение в стационаре проходит под наблюдением врачей в уютной обстановке. Реабилитация зависимых проходит по программе 12 шагов. Поддержка и участие профессиональных врачей и психологов.
