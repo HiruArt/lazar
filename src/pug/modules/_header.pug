@@ -2,13 +2,14 @@ header.header
 	.header__inner.site-container
 		.header__top
 			.header__logo
-				picture
-					source(srcset="./img/logo_main.webp" type="image/webp")
-					source(srcset="./img/logo_main.png" type="image/png")
-					img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="294" height="43" alt="img")
+				a(href="#").header__logo-i
+					picture
+						source(srcset="./img/logo_main.webp" type="image/webp")
+						img(src="./img/logo_main.png" width="294" height="43" alt="img")
 			.header__content
 				.header__region
-					select Выбрать регион
+					select#region
+						option Выбрать регион
 						option Москва
 						option Сибирь
 				.header__phone
@@ -19,7 +20,7 @@ header.header
 					a(href="javascript:void(0);").header__mobile-btn#menu-btn
 		.header__bottom
 			.header__nav
-				.nav__title Меню
+				.nav__title.tablet Меню
 				.nav__list
 					.nav__item.parent
 						a(href="#").nav__link Лечение алкоголизма
@@ -58,7 +59,7 @@ header.header
 						a(href="#").nav__link Цены
 					.nav__item
 						a(href="#").nav__link Контакты
-				.nav__bottom
+				.nav__bottom.tablet
 					.header__phone
 						a(href="tel:88127706519").header__phone-i 8 (812) 770-65-19
 					.header__btn

@@ -149,23 +149,23 @@ $(document).ready(function () {
 
   $('.phone').inputmask("+38 (999) 999-99-99");
 
-  // $('element wrap').magnificPopup({
-  //   delegate: 'a:not(.slick-cloned)',
-  //   type: 'image',
-  //   closeOnContentClick: false,
-  //   closeBtnInside: false,
-  //   gallery: {
-  //     enabled: true,
-  //   },
-  //   zoom: {
-  //     enabled: true,
-  //     duration: 300
-  //   },
-  //   removalDelay: 300,
-  //   disableOn: 0,
-  //   midClick: true,
-  //
-  // });
+  $('.magnific-popup').magnificPopup({
+    delegate: 'a:not(.slick-cloned)',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    gallery: {
+      enabled: true,
+    },
+    zoom: {
+      enabled: true,
+      duration: 300
+    },
+    removalDelay: 300,
+    disableOn: 0,
+    midClick: true,
+
+  });
 
 
   /*popups start*/
@@ -190,6 +190,8 @@ $(document).ready(function () {
     }
   });
   /*popups end*/
+
+  $( "#region" ).selectmenu();
 
 });
 

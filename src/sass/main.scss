@@ -7,7 +7,7 @@ $blacklight: #656073;
 
 * {
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Ubuntu";
   font-weight: 400;
   font-size: 16px;
 }
@@ -55,6 +55,10 @@ button:focus,
   outline-width: 0!important;
   outline-style: none!important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+select{
+  outline: none;
 }
 
 ul{
@@ -132,22 +136,241 @@ input{
   padding: 0 15px;
   }
 
-.site-title2{
-  font-size: 40px;
-  line-height: 120%;
-  font-weight: 300;
-  letter-spacing: 0.05em;
 
-  color: #090909;
+.site-btn{
+  width: fit-content;
+  height: 34px;
+  color: white;
+  border-radius: 17px;
+  box-shadow: 0px 0px 38px 0px rgba(105, 198, 231, 0.91);
+  background: #69c6e7;
+  transition: .3s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 19px;
 
-  @include for-992{
-    text-align: center;
-    font-size: 30px;
-    line-height: 103%;
+
+  &:hover{
+    background: #0b5ea3;
+    box-shadow: 0px 0px 24px 0px rgba(1, 83, 156, 0.74);
+  }
+
+
+}
+
+/*header*/
+
+.header{
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-i{
+    width: 294px;
+    display: flex;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &__content{
+    display: flex;
+    align-items: center;
+  }
+
+  &__region{
+    margin-right: 20px;
+
+    .ui-selectmenu-button{
+      background: transparent;
+      border: none;
+      outline: none;
+      position: relative;
+      color: #333333;
+      width: auto;
+
+      .ui-selectmenu-icon{
+        background: url("../img/ico/triangle.svg") center/contain no-repeat;
+        transform: rotate(180deg);
+        filter: grayscale(1);
+        width: 11px;
+        height: 7px;
+        top: 7px;
+        right: 2px;
+      }
+
+      &[aria-expanded="true"] {
+        .ui-selectmenu-icon {
+          background: url("../img/ico/triangle.svg") center/contain no-repeat;
+          transform: rotate(0deg);
+          filter: grayscale(0);
+          top: 6px;
+        }
+      }
+
+      &:active{
+        color: inherit;
+      }
+    }
+  }
+
+  &__phone{
+    margin-right: 20px;
+  }
+
+  &__phone-i{
+    font-size: 22px;
+    color: #59c0e4;
+    transition: .3s all;
+
+    &:hover{
+      color: #0b5ea3;
+    }
+  }
+
+  &__btn{
+
+  }
+
+  &__btn-i{
+
+  }
+
+  &__mobile-btn{
+
+  }
+
+  &__mobile-btn{
+
+  }
+
+  &__bottom{
+
   }
 }
 
-.site-btn{
-
+.ui-widget.ui-widget-content{
+  border: 0;
+  padding-left: 10px;
+  padding-right: 18px;
 }
+.ui-button.ui-state-active:hover, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active{
+  background: #69c6e7 !important;
+  border-color: #69c6e7;
+}
+
+.nav{
+
+  &__title{
+
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+
+  &__item{
+    padding:  0 15px;
+    transition: .3s;
+    position: relative;
+
+
+    &.parent:hover{
+
+    }
+  }
+
+  &__link{
+    color: #333333;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: .2s all;
+
+    &:hover{
+      color: #69c6e7 !important;
+    }
+  }
+
+  &__item:hover &__link{
+    color: #336699;
+  }
+
+  &__triangle{
+    background: url("../img/ico/triangle.svg") center/contain no-repeat;
+    transform: rotate(180deg);
+    filter: grayscale(1);
+    width: 11px;
+    height: 7px;
+    top: 7px;
+    right: 2px;
+    display: inline-flex;
+    margin-left: 8px;
+  }
+
+  &__item:hover &__triangle{
+    background: url("../img/ico/triangle.svg") center/contain no-repeat;
+    transform: rotate(0deg);
+    filter: grayscale(0);
+    top: 6px;
+  }
+
+
+  &__submenu{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: .3s all;
+    padding: 65px 15px 15px;
+  }
+
+  &__item:hover &__submenu{
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__submenu-link{
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: .3s all;
+
+    &:hover{
+      color: #69c6e7;
+    }
+  }
+
+  &__bottom{
+
+  }
+}
+
 

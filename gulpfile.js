@@ -67,7 +67,8 @@ gulp.task('css-libs', () => {
       'node_modules/slick-carousel/slick/slick.css',
       // 'node_modules/bootstrap/dist/css/bootstrap.css',
       // 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
-      'node_modules/magnific-popup/dist/magnific-popup.css'
+      'node_modules/magnific-popup/dist/magnific-popup.css',
+      'node_modules/jquery-ui-dist/jquery-ui.min.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))
     .pipe(concat('libs.css'))
@@ -85,7 +86,8 @@ gulp.task('js-libs', () => {
       'node_modules/blazy/blazy.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
       'node_modules/slick-carousel/slick/slick.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+      'node_modules/jquery-ui-dist/jquery-ui.min.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
     .pipe(concat('libs.js'))
