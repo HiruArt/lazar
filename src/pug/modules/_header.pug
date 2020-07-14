@@ -1,24 +1,25 @@
 header.header
-	.header__inner.site-container
-		.header__top
-			.header__logo
-				a(href="#").header__logo-i
-					picture
-						source(srcset="./img/logo_main.webp" type="image/webp")
-						img(src="./img/logo_main.png" width="294" height="43" alt="img")
-			.header__content
-				.header__region
-					select#region
-						option Выбрать регион
-						option Москва
-						option Сибирь
-				.header__phone
-					a(href="tel:88127706519").header__phone-i 8 (812) 770-65-19
-				.header__btn
-					a(href="#").header__btn-i.site-btn Получить помощь
-				.header__mobile-btn
-					a(href="javascript:void(0);").header__mobile-btn#menu-btn
-		.header__bottom
+	.header__inner
+		.header__top-wrap
+			.header__top.site-container
+				.header__logo
+					a(href="#").header__logo-i
+						picture
+							source(srcset="./img/logo_main.webp" type="image/webp")
+							img(src="./img/logo_main.png" width="294" height="43" alt="img")
+				.header__content
+					.header__region
+						select#region
+							option Выбрать регион
+							option Москва
+							option Сибирь
+					.header__phone
+						a(href="tel:88127706519").header__phone-i 8 (812) 770-65-19
+					.header__btn
+						a(href="#").header__btn-i.site-btn Получить помощь
+					.header__mobile-btn
+						a(href="javascript:void(0);").header__mobile-btn#menu-btn
+		.header__bottom.site-container
 			.header__nav
 				.nav__title.tablet Меню
 				.nav__list
@@ -52,9 +53,9 @@ header.header
 						a(href="#").nav__link О клинике
 						span.nav__triangle
 						.nav__submenu
-							a(href="#").nav__submenu-link Вылечить алкоголизм
-							a(href="#").nav__submenu-link Вывод из запоя
-							a(href="#").nav__submenu-link Нарколог на дом
+							a(href="#").nav__submenu-link О нас
+							a(href="#").nav__submenu-link Врачи
+							a(href="#").nav__submenu-link Пример
 					.nav__item
 						a(href="#").nav__link Цены
 					.nav__item

@@ -193,6 +193,91 @@ $(document).ready(function () {
 
   $( "#region" ).selectmenu();
 
+
+  $(document).scroll(function () {
+    var top = $(document).scrollTop();
+    if (top < 1) {
+      $(".header").removeClass('scroll');
+    } else {
+      $(".header").addClass('scroll');
+    }
+  });
+
+  if($(document).find('.our-service-slider').length > 0) {
+
+    $(".our-service-slider").owlCarousel({
+      loop: true,
+      nav: true,
+      responsive : {
+        0 : {
+          items: 1,
+        },
+        550 : {
+          items: 2,
+        },
+        992 : {
+          items: 3,
+          center: true,
+        }
+      }
+    });
+
+    $(".our-service-slider").on('changed.owl.carousel', function(event) {
+
+    });
+
+  }
+
+  if($(document).find('.doctors-slider').length > 0) {
+
+    $(".doctors-slider").owlCarousel({
+      loop: true,
+      nav: true,
+      dots: false,
+      responsive : {
+        0 : {
+          items: 1,
+        },
+        550 : {
+          items: 2,
+        },
+        992 : {
+          items: 3,
+          center: true,
+        }
+      }
+    });
+
+    $(".our-service-slider").on('changed.owl.carousel', function(event) {
+
+    });
+
+  }if($(document).find('.license-slider').length > 0) {
+
+    $(".license-slider").owlCarousel({
+      loop: true,
+      nav: true,
+      dots: false,
+      responsive : {
+        0 : {
+          items: 1,
+        },
+        550 : {
+          items: 2,
+        },
+        992 : {
+          items: 3,
+          center: true,
+        }
+      }
+    });
+
+    $(".license-slider").on('changed.owl.carousel', function(event) {
+
+    });
+
+  }
+
 });
 
 
