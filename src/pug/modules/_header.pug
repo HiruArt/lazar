@@ -8,20 +8,23 @@ header.header
 							source(srcset="./img/logo_main.webp" type="image/webp")
 							img(src="./img/logo_main.png" width="294" height="43" alt="img")
 				.header__content
-					.header__region
+					.header__region.desktop
 						select#region
 							option Выбрать регион
 							option Москва
 							option Сибирь
 					.header__phone
 						a(href="tel:88127706519").header__phone-i 8 (812) 770-65-19
-					.header__btn
-						a(href="#").header__btn-i.site-btn Получить помощь
-					.header__mobile-btn
-						a(href="javascript:void(0);").header__mobile-btn#menu-btn
+					.header__btn.desktop
+						a(href="#" data-modal-class="free-help").header__btn-i.site-btn Получить помощь
+					.header__mobile-btn.tablet
+						a(href="javascript:void(0);").header__mobile-btn-i.menu-btn-js
+							img(src="./img/ico/burger-menu.svg" alt="ico")
 		.header__bottom.site-container
-			.header__nav
+			.header__nav.nav
 				.nav__title.tablet Меню
+					a(href="javascript:void(0);").nav__btn-close.menu-btn-close-js
+
 				.nav__list
 					.nav__item.parent
 						a(href="#").nav__link Лечение алкоголизма
@@ -64,4 +67,4 @@ header.header
 					.header__phone
 						a(href="tel:88127706519").header__phone-i 8 (812) 770-65-19
 					.header__btn
-						a(href="#").header__btn-i.site-btn Получить помощь
+						a(href="#" data-modal-class="free-help").header__btn-i.site-btn Получить помощь

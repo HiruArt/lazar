@@ -27,10 +27,10 @@ block content
         .top-home__content
           h1.top-home__title лечение алкогольной и наркотической зависимости с гарантией от срыва
           .top-home__btn
-            a(href="#").site-btn.top-home__btn-i Вызвать нарколога
-            a(href="#").site-btn.site-btn--transparent.top-home__btn-i Бесплатная консультация
+            a(href="#" data-modal-class="call-narcologist").site-btn.top-home__btn-i Вызвать нарколога
+            a(href="#" data-modal-class="free-help").site-btn.site-btn--transparent.top-home__btn-i Бесплатная консультация
 
-    .advantage.top-home.b-lazy.webp-img(data-webp="./img/gradient-bg.webp"
+    .advantage.b-lazy.webp-img(data-webp="./img/gradient-bg.webp"
     data-img="./img/gradient-bg.jpg")
       .advantage__inner.site-container
         h2.advantage__title.site-title Наши преимущества
@@ -182,7 +182,7 @@ block content
             .why-we__item.custom-col
               .why-we__ico
                 picture
-                  source(srcset="./img/ico/why-we-ico02.webp" type="image/webp")
+                  source(srcset="./img/ico/why-we-ico03.webp" type="image/webp")
                   img(src="./img/ico/why-we-ico02.png" width="142" height="142" alt="img")
               .why-we__name Стационар <br> и реабилитация
               .why-we__txt.
@@ -204,8 +204,8 @@ block content
         p.
           Круглосуточный стационар у метро Балтийская оснащен современным оборудованием и имеет комфортные 2-х местные палаты для пребывания пациентов под постоянным наблюдением медицинского персонала. В штате имеется психолог, психотерапевт, кардиолог, невролог, что позволяет проводить точную диагностику последствий алкоголизма и разрабатывать индивидуальную программу реабилитации.
 
-    .consultation.b-lazy.webp-img(data-webp="../img/consultation-bg.webp"
-    data-img="../img/consultation-bg.jpg")
+    .consultation.b-lazy.webp-img(data-webp="./img/consultation-bg.webp"
+    data-img="./img/consultation-bg.jpg")
       .consultation__inner.site-container
         .consultation__img
           .consultation__img-i.b-lazy.webp-img(data-webp="./img/consultation-img.webp"
@@ -220,7 +220,7 @@ block content
               .site-form__btn
                 a(href="#").site-form__btn-i.site-btn Отправить
               .site-form__public-offer
-                p *Нажимая на кнопку Отправить, вы принимаете условия&nbsp;
+                p *Нажимая на кнопку Отправить, <br class="tablet"> вы принимаете условия&nbsp;
                   a(href="#") Публичной оферты
 
     .service-price.b-lazy.webp-img(data-webp="../img/gradient-bg.webp"
@@ -271,20 +271,34 @@ block content
                 a(href="#").service-price__btn.site-btn Заказать
 
     .review
-      .gradient-bg
+      .review__gradient-bg.desktop.b-lazy.webp-img(data-webp="../img/gradient-bg-rev.webp"
+      data-img="../img/gradient-bg-rev.png")
       .review__inner.site-container
         h2.review__title.site-title Отзывы
-        .review__slider.review-slider
-          .review__item
+      .review__slider.review-slider.owl-carousel
+        .review__item
+          .review__item-content.site-container
             .review__img
               picture
                 source(srcset="./img/slider-img.webp" type="image/webp")
-                img(src="./img/slider-img.png" width="650"  alt="img")
+                img(src="./img/slider-img.png"  alt="img")
             .review__info
               .review__head Андрей, 37 лет, г. Санкт-Петербург
               .review__txt.
                 Употреблял алкоголь более 3 месяцев, с Нового Года. Поступил в клинику в очень плохом состоянии. После курса лечения, который длился 5 дней, чувствую себя обновленным и восстановленным.<br>
                 Употреблял алкоголь более 3 месяцев, с Нового Года. Поступил в клинику в очень плохом состоянии. После курса лечения, который длился 5 дней, чувствую себя обновленным и восстановленным.
+        .review__item
+          .review__item-content.site-container
+            .review__img
+              picture
+                source(srcset="./img/slider-img.webp" type="image/webp")
+                img(src="./img/slider-img.png"  alt="img")
+            .review__info
+              .review__head Андрей, 37 лет, г. Санкт-Петербург
+              .review__txt.
+                Употреблял алкоголь более 3 месяцев, с Нового Года. Поступил в клинику в очень плохом состоянии. После курса лечения, который длился 5 дней, чувствую себя обновленным и восстановленным.<br>
+                Употреблял алкоголь более 3 месяцев, с Нового Года. Поступил в клинику в очень плохом состоянии. После курса лечения, который длился 5 дней, чувствую себя обновленным и восстановленным.
+
 
     .text-block
       .text-block__inner.site-container

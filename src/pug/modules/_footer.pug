@@ -1,7 +1,8 @@
-footer.footer
+footer.footer.b-lazy.webp-img(data-webp="../img/gradient-bg.webp"
+  data-img="../img/gradient-bg.png")
   .footer__inner.site-container
     .footer__col.footer__col-service
-      .footer__col-title
+      .footer__col-title Основные услуги
       ul.footer__list
         li
           a(href="#").footer__link Лечение алкоголизма
@@ -40,26 +41,28 @@ footer.footer
           | г. Санкт-Петербург, пер. Лодыгина, д.7 к.2
       .footer__col-row
         a(href="tel:88127706521").footer__col-phone
-        include ../../img/ico/phone.svg
-        | 8 (812) 770-65-21
+          include ../../img/ico/phone.svg
+          | 8 (812) 770-65-21
       .footer__col-row
         a(href="mailto:klinika.help@yandex.ru").footer__col-mail
-        include ../../img/ico/mail.svg
-        | klinika.help@yandex.ru
+          include ../../img/ico/mail.svg
+          | klinika.help@yandex.ru
       .footer__col-row
         a(href="#").footer__col-btn.site-btn Оставить заявку
 
-    .footer__col.footer__col-cotial
-      a(href="#").footer__col-cotial-i
-        include ../../img/ico/fb.svg
-      a(href="#").footer__col-cotial-i
-        include ../../img/ico/inst.svg
-      a(href="#").footer__col-cotial-i
-        include ../../img/ico/vk.svg
-      a(href="#").footer__col-cotial-i
-        include ../../img/ico/yt.svg
-      a(href="#").footer__col-cotial-i
-        include ../../img/ico/ok.svg
+    .footer__col.footer__col-sotial
+      .footer__col-title Соцсети
+      .footer__col-sotial-list.custom-row
+        a(href="#").footer__col-sotial-i.custom-col
+          include ../../img/ico/fb.svg
+        a(href="#").footer__col-sotial-i.custom-col
+          include ../../img/ico/inst.svg
+        a(href="#").footer__col-sotial-i.custom-col
+          include ../../img/ico/vk.svg
+        a(href="#").footer__col-sotial-i.custom-col
+          include ../../img/ico/yt.svg
+        a(href="#").footer__col-sotial-i.custom-col
+          include ../../img/ico/ok.svg
 
     .footer__bottom
       .footer__bottom-txt © ООО «Центр доктора Лазарева» 2020г. ЛО-78-01-008324
@@ -68,12 +71,44 @@ footer.footer
 
 
 
-.popup.callback
+.popup.call-narcologist
   .popup__body
     .popup__inner
       .popup__close
         .popup__close-ico
-      .popup__content.callback__content
+      .popup__content.call-narcologist__content
+        .consultation__info
+          .consultation__title хотите вызвать <br> нарколога на дом?
+          .consultation__form.site-form
+            form
+              .site-form__row
+                .site-form__input
+                  input(type="tel" inputmode="numeric" placeholder="Введите ваш номер").phone
+              .site-form__btn
+                a(href="#").site-form__btn-i.site-btn Отправить
+              .site-form__public-offer
+                p *Нажимая на кнопку Отправить, вы принимаете условия&nbsp;
+                  a(href="#") Публичной оферты
+
+
+.popup.free-help
+  .popup__body
+    .popup__inner
+      .popup__close
+        .popup__close-ico
+      .popup__content.free-help__content
+        .consultation__info
+          .consultation__title получите бесплатную <br> консультацию
+          .consultation__form.site-form
+            form
+              .site-form__row
+                .site-form__input
+                  input(type="tel" inputmode="numeric" placeholder="Введите ваш номер").phone
+              .site-form__btn
+                a(href="#").site-form__btn-i.site-btn Отправить
+              .site-form__public-offer
+                p *Нажимая на кнопку Отправить, вы принимаете условия&nbsp;
+                  a(href="#") Публичной оферты
 
 
 
