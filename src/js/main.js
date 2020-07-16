@@ -165,20 +165,22 @@ $(document).ready(function () {
   if($(document).find('.our-service-slider').length > 0) {
 
     $(".our-service-slider").owlCarousel({
-      loop: true,
-      nav: true,
       navigationText: ["", ""],
       responsive : {
         0 : {
-          items: 1,
+
+          items: 1.2,
+          nav: false,
         },
-        550 : {
-          items: 2,
+        420 : {
+
+          items: 1.5,
+          center: true,
         },
         992 : {
           items: 3,
-          center: true,
-
+          nav: true,
+          loop: true,
         }
       }
     });
@@ -192,20 +194,20 @@ $(document).ready(function () {
   if($(document).find('.doctors-slider').length > 0) {
 
     $(".doctors-slider").owlCarousel({
-      loop: true,
       nav: true,
       dots: false,
       navigationText: ["", ""],
+      center: true,
       responsive : {
         0 : {
-          items: 1,
+          items: 1.2,
         },
-        550 : {
-          items: 2,
+        420 : {
+          items: 1.5,
         },
         992 : {
           items: 3,
-          center: true,
+          loop: true,
         }
       }
     });
@@ -219,23 +221,46 @@ $(document).ready(function () {
   if($(document).find('.license-slider').length > 0) {
 
     $(".license-slider").owlCarousel({
-      loop: true,
-      nav: true,
-      dots: false,
       navigationText: ["", ""],
       responsive : {
         0 : {
-          items: 1,
+
+          items: 1.2,
+          nav: false,
+        },
+        420 : {
+          items: 1.5,
+          center: true,
         },
         550 : {
           items: 2,
+          center: true
         },
         992 : {
           items: 3,
-          center: true,
+          nav: true,
+          loop: true,
         }
       }
     });
+    // $(".license-slider").owlCarousel({
+    //   loop: true,
+    //   nav: true,
+    //   dots: false,
+    //   navigationText: ["", ""],
+    //   responsive : {
+    //     0 : {
+    //       items: 1,
+    //     },
+    //     550 : {
+    //       items: 2,
+    //     },
+    //     992 : {
+    //       items: 3,
+    //       center: true,
+    //     }
+    //   }
+    // });
 
     $(".license-slider").on('changed.owl.carousel', function(event) {
 
@@ -258,6 +283,24 @@ $(document).ready(function () {
     $(".review-slider").on('changed.owl.carousel', function(event) {
 
     });
+  }
+
+  if($(document).find('.service-price-slider').length > 0 && $(window).width() < 800) {
+
+    $(".service-price-slider").owlCarousel({
+      loop: false,
+      items: 1.5,
+      nav: true,
+      dots: false,
+      center:true
+    });
+
+    $(".service-price-slider").on('changed.owl.carousel', function(event) {
+
+    });
+
+  } else {
+    $(document).find('.service-price-slider').removeClass('owl-carousel');
   }
 
   /*validation start*/

@@ -329,6 +329,8 @@ h2, .site-title{
     @include for-992{
       padding-left: 0;
       padding-right: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
   }
 
@@ -1056,6 +1058,15 @@ h2, .site-title{
   padding-left: 50px;
   padding-right: 50px;
 
+  @include for-992{
+    margin-right: -15px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    background-size: cover, 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .owl-prev{
     position: absolute;
     top: 50%;
@@ -1143,6 +1154,10 @@ h2, .site-title{
 
     /*license*/
 
+    .owl-item:not(.active) .license__item img{
+      opacity: 0;
+    }
+
     .owl-item.active .license__item img{
       transform: perspective(500px) rotateY(30deg) scale(0.8);
     }
@@ -1155,6 +1170,58 @@ h2, .site-title{
       transform: none;
     }
   }
+
+  @include from-420-for-992{
+    .owl-item:not(.active) .our-service__item{
+      opacity: 0;
+    }
+    .owl-item.active .our-service__item {
+      transform: none;
+
+      .our-service__item-btn{
+        pointer-events: auto;
+        background:  #69c6e7;
+        color: white;
+        border-color: #69c6e7;
+        box-shadow: 0 0 38px 0 rgba(105,198,231,.91);
+        border-radius: 30px;
+
+        &:hover {
+          box-shadow: 0 0 24px 0 rgba(1, 83, 156, .74);
+          background: #0b5ea3;
+          border-color: #0b5ea3
+        }
+      }
+    }
+
+    .owl-item.active + .owl-item.active .our-service__item {
+      transform: perspective(600px) rotateY(-30deg) scale(0.9) translateX(-60px);
+
+      .our-service__item-btn{
+        pointer-events: none;
+        background: transparent;
+        color: #336699;
+        border-color: #336699;
+        box-shadow: none;
+      }
+    }
+
+    /*license*/
+
+    .owl-item:not(.active) .license__item{
+      opacity: 0;
+    }
+
+    .owl-item.active .license__item img{
+      transform: none;
+    }
+
+    .owl-item.active + .owl-item.active .license__item img{
+      transform: perspective(600px) rotateY(-30deg) scale(0.9) translateX(-60px);
+    }
+
+  }
+
 }
 
 .slider-styles-opacity{
@@ -1203,12 +1270,58 @@ h2, .site-title{
       }
     }
   }
+
+  @include for-992{
+    .owl-item.active .doctors__item {
+
+      opacity: 1;
+      transform: scale(1);
+
+      .doctors__btn{
+        opacity: 1 ;
+      }
+    }
+
+    .owl-item.active + .owl-item.active .doctors__item {
+      opacity: 0.4;
+      transform: scale(0.8);
+
+      .doctors__btn{
+        opacity: 0;
+      }
+    }
+
+    &.doctors-slider {
+
+      .owl-nav {
+        width: 78%;
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .owl-nav > .disabled {
+        display: none;
+      }
+
+      .owl-nav > button {
+        width: 18px;
+        height: 24px;
+      }
+    }
+  }
 }
 
 .top-home{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include for-420{
+    background-color: #d4e4f2 !important;
+    background-image: none !important;
+  }
 
   &__inner{
     display: flex;
@@ -1403,6 +1516,7 @@ h2, .site-title{
 
   }
 
+
   &__slider{
 
   }
@@ -1452,6 +1566,10 @@ h2, .site-title{
     align-items: center;
     justify-content: center;
 
+    @include for-420{
+      max-width: 210px;
+    }
+
   }
 
 }
@@ -1464,6 +1582,11 @@ h2, .site-title{
   &__inner{
     padding-top: 85px;
     padding-bottom: 65px;
+
+    @include for-992{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 
   &__title{
@@ -1472,15 +1595,24 @@ h2, .site-title{
 
   &__slider{
 
+
+    @include for-992{
+      margin-right: -15px;
+      margin-left: -15px;
+      width: calc(100% + 30px);
+    }
   }
 
   &__item{
     padding: 30px;
     transition: .3s all;
-
-
     opacity: 0.4;
     transform: scale(0.8);
+
+    @include for-992{
+      padding: 0;
+      padding-bottom: 40px;
+    }
   }
 
   &__photo{
@@ -1554,6 +1686,10 @@ h2, .site-title{
 
     @include for-992{
       margin-bottom: 45px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
 
     @include for-768{
@@ -1586,6 +1722,12 @@ h2, .site-title{
     text-align: center;
   }
 
+}
+.service-page .why-we{
+  &__inner{
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
 }
 
 .consultation{
@@ -1675,8 +1817,16 @@ h2, .site-title{
   background-position: center top;
   background-repeat: no-repeat;
 
+  @include for-768{
+    background-size: 100% 200px;
+  }
+
   &__inner{
     padding-top: 80px;
+
+    @include for-992{
+      padding-top: 30px;
+    }
   }
 
   &__title{
@@ -1700,6 +1850,16 @@ h2, .site-title{
     color: #333333;
   }
 
+  &__list{
+    @include for-768{
+      border-bottom: 1px solid #e9e9ea;
+      border-top: 1px solid #e9e9ea;
+      margin-left: -15px;
+      margin-right: -15px;
+      width: calc(100% + 30px);
+    }
+  }
+
   &__row{
     border-bottom: 1px solid #e9e9ea;
     display: flex;
@@ -1709,6 +1869,9 @@ h2, .site-title{
 
     @include for-768{
       display: block;
+      border: none;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
   }
 
@@ -1724,6 +1887,10 @@ h2, .site-title{
         text-align: center;
 
         margin-bottom: 15px;
+
+        br{
+          display: none;
+        }
       }
     }
 
@@ -1757,6 +1924,22 @@ h2, .site-title{
   }
 
 }
+.service-price-slider{
+  .owl-nav{
+    width: 78%;
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .owl-nav > .disabled{
+    display: none;
+  }
+  .owl-nav > button{
+    width: 18px;
+    height: 24px;
+  }
+}
 
 .review{
   position: relative;
@@ -1772,11 +1955,19 @@ h2, .site-title{
     transform: translateY(-50%);
     height: 660px;
     z-index: -1;
+
+    @include for-992{
+      display: none;
+    }
   }
 
   &__inner{
   //  padding-top: 80px;
     margin-top: 80px;
+
+    @include for-992{
+      margin-top: 30px;
+    }
   }
 
   &__title{
@@ -1785,6 +1976,11 @@ h2, .site-title{
 
   &__slider{
     margin-top: 65px;
+
+    @include for-992{
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
 
   &__item{
@@ -1794,6 +1990,12 @@ h2, .site-title{
   &__item-content{
     position: relative;
     display: flex;
+
+    @include for-992{
+      flex-direction: column;
+      align-items: center;
+      padding: 0 30px;
+    }
   }
 
   &__img{
@@ -1803,6 +2005,13 @@ h2, .site-title{
     width: 100%;
     height: 100%;
 
+    @include for-992{
+      position: relative;
+      height: auto;
+      margin-left: -30px;
+      margin-right: -30px;
+      width: calc(100% + 60px);
+    }
 
     img{
       width: 100%;
@@ -1824,6 +2033,21 @@ h2, .site-title{
     max-width: 555px;
     width: 100%;
 
+    @include for-1200{
+      margin-left: 30px;
+    }
+
+    @include for-992{
+      margin-top: -90px;
+      margin-bottom: 0;
+      padding: 30px;
+      margin-left: 0;
+    }
+
+    @include for-550{
+
+    }
+
     &:before{
       content: '“';
       font-family: 'Montserrat';
@@ -1831,8 +2055,14 @@ h2, .site-title{
       color: #336699;
       font-size: 150px;
       position: absolute;
-      left: -42px;
+      left: -15px;
       top: 18px;
+
+      @include for-992{
+        top: 14px;
+        font-size: 114px;
+        left: -30px;
+      }
     }
   }
 
@@ -1860,6 +2090,15 @@ h2, .site-title{
 
     @include for-1600{
       left: 30%;
+    }
+    @include for-1200{
+      left: 45px;
+      transform: none;
+    }
+    @include for-992{
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -40px;
     }
   }
 
@@ -1965,8 +2204,17 @@ h2, .site-title{
   background-position: center top;
   background-size: contain;
 
+  @include for-768{
+    background-size: 100% 350px;
+  }
+
+
   &__inner{
     padding-top: 80px;
+
+    @include for-992{
+      padding-top: 40px;
+    }
   }
 
   &__title{
@@ -1975,6 +2223,12 @@ h2, .site-title{
 
   &__slider{
 
+    @include for-992{
+      //margin-left: -15px;
+      //margin-right: -15px;
+      //width: calc(100% + 30px);
+      padding: 0;
+    }
   }
 
   &__item{
@@ -1983,6 +2237,11 @@ h2, .site-title{
     img{
       padding: 15px;
       transition: .2s all;
+
+      @include for-992{
+        max-width: 270px;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -1992,6 +2251,11 @@ h2, .site-title{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include for-420{
+    background-color: #d4e4f2 !important;
+    background-image: none !important;
+  }
 
   &__inner{
     padding-top: 80px;
@@ -2030,6 +2294,10 @@ h2, .site-title{
   background-position: center top;
   background-repeat: no-repeat;
 
+  @include for-768{
+    background-size: 100% 350px;
+  }
+
   &__inner{
     display: flex;
     flex-wrap: wrap;
@@ -2041,10 +2309,19 @@ h2, .site-title{
       padding-top: 80px;
       padding-bottom: 50px;
     }
+
+    @include for-420{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__col{
     margin-bottom: 50px;
+
+    @include for-420{
+      margin-bottom: 20px;
+    }
   }
 
   &__col-service{
@@ -2064,22 +2341,40 @@ h2, .site-title{
     @include for-992{
       text-align: center;
     }
+
+    @include for-420{
+      margin-bottom: 20px;
+    }
   }
 
   &__list{
     column-count: 2;
 
+
     @include for-992{
+      li{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
       column-count: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
   }
 
   &__link{
     line-height: 36px;
     transition: .3s all;
+
+    @include for-420{
+      line-height: 28px;
+      text-align: center;
+      font-size: 14px;
+    }
 
     &:hover{
       color: #369;
@@ -2093,6 +2388,7 @@ h2, .site-title{
       width: 100%;
     }
   }
+
 
   &__col-row{
     display: flex;
@@ -2110,6 +2406,13 @@ h2, .site-title{
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      @include for-420{
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+        transform: none;
+      }
     }
 
   }
@@ -2118,6 +2421,17 @@ h2, .site-title{
     padding-left: 55px;
     position: relative;
     line-height: 24px;
+
+    @include for-420{
+      padding-left: 0px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+
+      svg{
+
+      }
+    }
   }
 
   &__col-phone{
@@ -2125,6 +2439,17 @@ h2, .site-title{
     position: relative;
     transition: .3s all;
     line-height: 24px;
+
+    @include for-420{
+      padding-left: 0px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+
+      svg{
+
+      }
+    }
 
     &:hover{
       color: #369;
@@ -2136,6 +2461,17 @@ h2, .site-title{
     position: relative;
     transition: .3s all;
     line-height: 24px;
+
+    @include for-420{
+      padding-left: 0px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+
+      svg{
+
+      }
+    }
 
     &:hover{
       color: #369;
@@ -2162,9 +2498,13 @@ h2, .site-title{
 
   &__col-sotial-list{
 
+    @include for-420{
+      margin: 0 -5px;
+    }
   }
 
   &__col-sotial-i{
+
     svg path{
       transition: .3s all;
     }
@@ -2172,6 +2512,14 @@ h2, .site-title{
     &:hover{
       svg path{
         fill: #336699;
+      }
+    }
+
+    @include for-420{
+      padding: 0 5px;
+
+      svg{
+        transform: scale(.8);
       }
     }
   }
@@ -2206,6 +2554,10 @@ h2, .site-title{
 
     @include for-992{
       margin-right: 0;
+    }
+
+    @include for-420{
+      margin: 0 5px;
     }
 
     &:hover{

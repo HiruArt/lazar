@@ -12,6 +12,10 @@
   @media (min-width: 421px) { @content; }
 }
 
+@mixin from-420-for-992{
+  @media (min-width: 421px) and (max-width: 992px) { @content; }
+}
+
 @mixin for-550 {
   @media (max-width: 550px) { @content; }
 }
