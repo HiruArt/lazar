@@ -166,6 +166,7 @@ $(document).ready(function () {
 
     $(".our-service-slider").owlCarousel({
       navigationText: ["", ""],
+      smartSpeed: 600,
       responsive : {
         0 : {
 
@@ -186,9 +187,11 @@ $(document).ready(function () {
     });
 
     $(".our-service-slider").on('changed.owl.carousel', function(event) {
-
+      $('.our-service-slider').css('pointer-events', 'none');
+      setTimeout(function () {
+        $('.our-service-slider').css('pointer-events', 'auto');
+      }, 600);
     });
-
   }
 
   if($(document).find('.doctors-slider').length > 0) {
@@ -243,27 +246,12 @@ $(document).ready(function () {
         }
       }
     });
-    // $(".license-slider").owlCarousel({
-    //   loop: true,
-    //   nav: true,
-    //   dots: false,
-    //   navigationText: ["", ""],
-    //   responsive : {
-    //     0 : {
-    //       items: 1,
-    //     },
-    //     550 : {
-    //       items: 2,
-    //     },
-    //     992 : {
-    //       items: 3,
-    //       center: true,
-    //     }
-    //   }
-    // });
 
     $(".license-slider").on('changed.owl.carousel', function(event) {
-
+      $('.license-slider').css('pointer-events', 'none');
+      setTimeout(function () {
+        $('.license-slider').css('pointer-events', 'auto');
+      }, 600);
     });
 
   }
@@ -277,6 +265,8 @@ $(document).ready(function () {
       dots: false,
       autoHeight:true,
       slideSpeed: 300,
+      paginationSpeed: 500,
+      smartSpeed: 1300,
       navigationText: ["", ""],
     });
 

@@ -76,7 +76,8 @@ body{
 }
 
 .oh{
-  overflow: hidden;
+  //overflow: hidden;
+  //position: fixed;
 }
 
 a{
@@ -486,19 +487,18 @@ h2, .site-title{
     li{
       color: #666666;
       line-height: 24px;
-      padding-left: 25px;
+      //padding-left: 25px;
       position: relative;
       text-align: justify;
 
       &:before{
-        content: '';
-        height: 14px;
-        width: 14px;
-        border-radius: 50%;
-        background: #336699;
-        position: absolute;
-        left: 0;
-        top: 5px;
+        content: url('../img/ico/ul-ico.svg');
+        //height: 14px;
+        //width: 14px;
+        //border-radius: 50%;
+        //background: #336699;
+        //position: relative;
+        margin-right: 10px;
       }
 
       a{
@@ -521,6 +521,23 @@ h2, .site-title{
     @include for-992{
       margin: 0 -15px;
       width: calc(100% + 30px);
+    }
+
+    &[style="float: left;"]{
+      margin-right: 15px;
+
+      @include for-992{
+        margin-right: 0;
+      }
+    }
+
+
+    &[style="float: right;"]{
+      margin-left: 15px;
+
+      @include for-992{
+        margin-left: 0;
+      }
     }
   }
 
@@ -551,6 +568,7 @@ h2, .site-title{
     line-height: 30px;
     text-transform: uppercase;
     margin: 50px 0;
+    display: flex;
 
     @include for-992{
       text-align: justify;
@@ -926,6 +944,10 @@ h2, .site-title{
     padding: 50px 15px 15px;
     background: white;
     border-radius: 0 0 5px 5px;
+
+    @include from-992{
+      box-shadow: 0 0 20px 5px rgba(0,0,0,.15);
+    }
 
     @include for-992{
       position: static;
@@ -1981,6 +2003,17 @@ h2, .site-title{
       margin-top: 50px;
       margin-bottom: 50px;
     }
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    @include for-992{
+      background-position: center top;
+      margin-left: -15px;
+      margin-right: -15px;
+      width: calc(100% + 30px);
+    }
   }
 
   &__item{
@@ -2032,13 +2065,15 @@ h2, .site-title{
     margin-top: 75px;
     max-width: 555px;
     width: 100%;
+    transform: translateX(15px);
 
     @include for-1200{
       margin-left: 30px;
     }
 
     @include for-992{
-      margin-top: -90px;
+      //margin-top: -90px;
+      margin-top: 290px;
       margin-bottom: 0;
       padding: 30px;
       margin-left: 0;
@@ -2053,10 +2088,10 @@ h2, .site-title{
       font-family: 'Montserrat';
       font-weight: 800;
       color: #336699;
-      font-size: 150px;
+      font-size: 130px;
       position: absolute;
       left: -15px;
-      top: 18px;
+      top: 19px;
 
       @include for-992{
         top: 14px;
@@ -2075,6 +2110,7 @@ h2, .site-title{
 
   &__txt{
     line-height: 24px;
+    text-align: justify;
   }
 }
 .review-slider{
@@ -2083,13 +2119,13 @@ h2, .site-title{
     width: 180px;
     display: flex;
     justify-content: space-between;
-    left: 40%;
+    left: 30%;
     position: absolute;
     bottom: 70px;
     transform: translateX(-50%);
 
     @include for-1600{
-      left: 30%;
+      left: 20%;
     }
     @include for-1200{
       left: 45px;
@@ -2302,17 +2338,17 @@ h2, .site-title{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 130px;
-    padding-bottom: 110px;
+    padding-top: 80px;
+    padding-bottom: 50px;
 
     @include for-992{
-      padding-top: 80px;
-      padding-bottom: 50px;
+      padding-top: 60px;
+      padding-bottom: 40px;
     }
 
     @include for-420{
       padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
     }
   }
 
